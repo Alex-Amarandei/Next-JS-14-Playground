@@ -1,4 +1,3 @@
-export async function GET()
-{
-    return new Response("Profile");
+export async function GET() {
+	return new Response("Profile");
 }
