@@ -1,9 +1,12 @@
 "use client";
+import "client-only";
 import { useTheme } from "@/components/theme-provider";
+import { clientSideFunction } from "@/utils/client-utils";
 import React from "react";
 
 export default function ClientRoutePage() {
 	const theme = useTheme();
+	const result = clientSideFunction();
 
 	return (
 		<h1
@@ -11,7 +14,7 @@ export default function ClientRoutePage() {
 				color: theme.colors.primary,
 			}}
 		>
-			Client Page
+			{result}
 		</h1>
 	);
 }
